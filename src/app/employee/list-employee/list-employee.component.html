@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>Employee Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Contact Prefrences</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.employeeName}}</td>
+      <td>{{emp.email}}</td>
+      <td>{{emp.phone}}</td>
+      <td>{{emp.contactPrefrence}}</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm" (click)="editButtonClicked(emp.id)"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+      </td>
+    </tr>
+  </table>
+</div>
